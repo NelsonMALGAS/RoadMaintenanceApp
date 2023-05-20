@@ -35,6 +35,7 @@ function reverseGeocode(latitude, longitude) {
     var apiKey = 'c2978d2caf4f4dc58d22d2027c2f9073'; 
 
     var url = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${latitude},${longitude}`;
+console.log(url);
 
     fetch(url)
     .then(function(response) {
