@@ -1,0 +1,79 @@
+* {
+
+}
+body {
+    display: flex;
+    flex-direction: column;
+    border: solid red 5px;
+    box-sizing: border-box;
+    
+}
+.header {
+    background-color: azure;
+    display:flex;
+}
+.main {
+    background-color: blueviolet;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.testimony {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color:green ;
+    width:100%;
+    height:50px;
+    
+
+}
+
+.main-overlay {
+    background-color: rgb(46, 191, 191);
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    gap: 1rem;
+    align-content:space-around;
+    justify-content: center;  
+}
+.testimony-issues-reported {
+    margin:5px;
+    background-color: beige;
+    width: 100%;
+    height:50px;
+}
+
+.road-issues {
+    background-color: beige;
+    width: 150px;
+    height:150px fit-content;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 10px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.road-issues-icon {
+    padding-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+.road-issues-name {
+    text-align: center;
+}
+
+
+
+
+.footer {
+    background-color: rgb(102, 120, 120);
+}
+li {
+    list-style: none;
+}
