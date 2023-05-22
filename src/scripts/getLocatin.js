@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-var reportButton = document.getElementById('report-button');
+let reportButton = document.getElementById('report-button');
 
 // Event listener for the "Report Road Fault" button
 reportButton.addEventListener('click', function(event) {
@@ -18,8 +18,8 @@ function getLocation() {
 
 // Function to handle successful retrieval of location
 function showPosition(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
 
     // Call the reverse geocoding function to get the address
     reverseGeocode(latitude, longitude);
@@ -32,9 +32,9 @@ function handleLocationError(error) {
 
 // Function to perform reverse geocoding and get address based on coordinates
 function reverseGeocode(latitude, longitude) {
-    var apiKey = 'c2978d2caf4f4dc58d22d2027c2f9073'; 
+    let apiKey = 'c2978d2caf4f4dc58d22d2027c2f9073'; 
 
-    var url = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${latitude},${longitude}`;
+    let url = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${latitude},${longitude}`;
 console.log(url);
 
     fetch(url)
@@ -46,7 +46,7 @@ console.log(url);
         }
     })
     .then(function(data) {
-        var address = data.results[0].formatted;
+        let address = data.results[0].formatted;
         console.log('Address:', address);
     })
     .catch(function(error) {
