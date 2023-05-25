@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoadMaintenanceApp</title>
     <link rel="stylesheet" href="./src/css/styles.css">
-    <script src="./src/scripts/getLocatin.js" defer></script>
+    <!-- <script src="./src/scripts/getLocatin.js" defer></script> -->
     <script src="./src/scripts/main.js" defer></script>
+    <!-- <script src="./src/scripts/newFile.js" defer></script> -->
 </head>
 
 <body>
@@ -79,6 +80,29 @@
 </div>
 </div>
 </div>
+
+<dialog data-form-overlay> 
+<form class="form-overlay">
+    <h2 id="form-heading">Issue Name</h2>
+    <label>Location:</label>
+    <div class="fetch-location">
+    <input type="text" id="live-location" >
+    <button id="report-button">live location</button>
+    </div>
+    <div id="upload">
+        <label for="image-upload">Select an image of the Road Issue:</label>
+        <input type="file" id="image-upload" accept="image/*">
+    </div>
+    <div>
+        <label>Message/ Description</label>
+        <input type="text" placeholder="Optional but the message would be valuable">
+    </div>
+    <div class='buttons'>
+     <input type="button" value="Submit" id="submit"> <!-- onclick="getValue()"-->
+    <input type="button" value="Cancel" id="cancel"> 
+    </div>
+</form>
+</dialog>
 
 <footer>
 <hr>
