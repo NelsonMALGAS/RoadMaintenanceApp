@@ -1,18 +1,94 @@
 * {
-
+    margin: 0;
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif;
 }
 body {
+   margin: 0;
+   padding: 0;
+   background-color: #cccccce1;
+}
+/****Header*****/
+
+.header {
+    background-color: rgb(255, 123, 0);
     display: flex;
-    flex-direction: column;
-    border: solid red 5px;
-    box-sizing: border-box;
+    padding: 20px;
+    height: 10vh;
     
 }
-.header {
-    background-color: azure;
-    display:flex;
-    padding: 20px;
+.logoimg { 
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+    border: black solid;
+    border-radius: 12rem;
+    vertical-align: middle;
 }
+.title {
+    position: relative;
+    left: 1rem;
+    vertical-align: middle;
+}
+.slogan {
+    position: relative;
+    left: 3rem;
+    vertical-align: middle;
+    font-style: italic;
+}
+/****Header*****/
+
+/***** content/inner *******/
+.flex-container {
+    display: flex;
+    background-color: rgb(34, 35, 36);
+    width: 100%;
+    height: 80vh;
+}
+.image {
+    width:50%;
+    height: 80vh;
+}
+.grid-container {
+    width: 50%;
+    /* position: relative; 
+    top: 20%; */
+    height: 80vh;
+}
+.heroimg{
+    display: block;
+    width: 100%;
+    height: 80vh;
+    background-color: aquamarine;
+}
+.subText {
+    width: 80%;
+    padding:50px;
+}
+.subText h3 {
+    font-style: oblique;
+    color: white
+}
+
+.callToAction {
+    /* position: relative; */
+    top: 5rem;
+    text-align: center;
+}
+.left_button {
+    width: 10rem;
+    height: 3rem;
+    background-color:  rgb(255, 123, 0);
+    border: none;
+
+}
+
+.right_button {
+    width: 10rem;
+    height: 3rem;
+    border: 0.1rem solid  rgb(255, 123, 0);
+}
+
 .main {
     background-color: blueviolet;
     display: grid;
@@ -24,16 +100,6 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.button {
-    display: inline-block;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
 
 .testimony {
     border: 2px solid black;
@@ -41,19 +107,44 @@ body {
     background-color:green ;
     width:100%;
     height:50px;
-    
-
 }
-
 .main-overlay {
+    display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.box {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+ background-color: #b5510047;
+
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.box:hover {
+    background-color: #b55100c3;
+    
+}
+/* .main-overlay {
+    
     background-color: rgb(46, 191, 191);
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr ;
     gap: 1rem;
-    align-content:space-around;
-    justify-content: center;  
-}
+      
+} */
 .testimony-issues-reported {
     margin:5px;
     background-color: beige;
@@ -62,17 +153,22 @@ body {
 }
 
 .road-issues {
-    background-color: beige;
+    background-color: rgb(255, 123, 0);
+    border-radius: 5rem;
+    border: solid black;
     width: 150px;
     height:150px fit-content;
     margin-top: 10px;
     margin-left: auto;
     margin-right:auto;
     margin-bottom: 10px;
-    border-radius: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+}
+.road-issues:hover {
+    background-color: rgb(255, 153, 58);
 }
 
 .road-issues-icon {
@@ -86,10 +182,300 @@ body {
 
 
 
+@media screen and (max-width:750px) {
+    
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        background-image: url(https://media.istockphoto.com/id/1246882564/photo/lane-closure-on-a-busy-road-due-to-maintenance-signs-detour-traffic-temporary-street-work.jpg?s=612x612&w=0&k=20&c=ZSRskDjYvpOPpI19vmPHV7pQ0BqOI2vCs-3TlA9FGGI=);
+        background-size: cover;
+        width: 100%;
+        height: 80vh;
+    }
+    .image {
+        display:none;
+        width:50%;
+        height: 80vh;
+    }
+    .grid-container {
+        width: 50%;
+        /* position: relative; 
+        top: 20%; */
+        height: 80vh;
+    }
+    .heroimg{
+        display: block;
+        width: 100%;
+        height: 80vh;
+        background-color: aquamarine;
+    }
+    .subText {
+        width: 80%;
+        padding:50px;
+    }
+    .subText h3 {
+        color: rgb(0, 0, 0)
+    }
 
-.footer {
-    background-color: rgb(102, 120, 120);
+    
+.callToAction {
+    /* position: relative; */
+    top: 5rem;
+    text-align: center;
+}
+.left_button {
+    width: 10rem;
+    height: 3rem;
+    background-color:  rgb(255, 123, 0);
+    border: none;
+
+}
+
+.right_button {
+    width: 10rem;
+    height: 3rem;
+    border: 0.1rem solid  rgb(255, 123, 0);
+}
+
+.main {
+    background-color: blueviolet;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.testimony {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color:green ;
+    width:100%;
+    height:50px;
+}
+.main-overlay {
+    display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.box {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    background-color: #b5510043;
+
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.box:hover {
+    background-color: #b55100c3;
+    
+}
+/* .main-overlay {
+    
+    background-color: rgb(46, 191, 191);
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    gap: 1rem;
+      
+} */
+.testimony-issues-reported {
+    margin:5px;
+    background-color: beige;
+    width: 100%;
+    height:50px;
+}
+
+.road-issues {
+    background-color: rgb(255, 123, 0);
+    border-radius: 5rem;
+    border: solid black;
+    width: 150px;
+    height:150px fit-content;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+.road-issues:hover {
+    background-color: rgb(255, 153, 58);
+}
+
+.road-issues-icon {
+    padding-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+.road-issues-name {
+    text-align: center;
+}
+     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------- footer -----------------*/
+
+footer {
+    box-sizing: border-box;
+    width:100%;
+    min-height: 20vh;
+    background-color: rgb(255, 123, 0);
+    padding: 15px;
+}
+footer h3,h2 {
+    padding-top: 5px;
+    padding-bottom: 5px
+}
+
+.footer-styles {
+    padding:10px;
+}
+
+.contacts {
+    display:grid;
+    grid-template-columns:  1fr 1fr;
+}
+.socials {
+    padding: 5px;
+    width:fit-content;
+    display:flex;
+}
+svg {
+    width: 30px;
+    padding-left:15px;
+    cursor: pointer;
 }
 li {
     list-style: none;
+}
+
+.about-us .see-more {
+    display: none;
+}
+
+.about-us.expanded .see-more {
+    display: block;
+}
+.closing {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Styling for the feedback link */
+#feedback {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* Styling for the form popup */
+#feedback-form {
+    display: none;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width:750px) { 
+    footer {
+        box-sizing: border-box;
+        width:100%;
+        min-height: 20vh;
+        background-color: rgb(255, 123, 0);
+        padding: 15px;
+    }
+    footer h3,h2 {
+        padding-top: 5px;
+        padding-bottom: 5px
+    }
+    
+    .footer-styles {
+        padding:10px;
+    }
+    
+    .contacts {
+        display:grid;
+        grid-template-columns:  1fr;
+    }
+    .socials {
+        padding: 5px;
+        width:fit-content;
+        display:flex;
+    }
+    svg {
+        width: 30px;
+        padding-left:15px;
+        cursor: pointer;
+    }
+    li {
+        list-style: none;
+    }
+
+    .about-us .see-more {
+        display: none;
+    }
+    
+    .about-us.expanded .see-more {
+        display: block;
+    }
+    .closing {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    /* Styling for the feedback link */
+    #feedback {
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    /* Styling for the form popup */
+    #feedback-form {
+        display: none;
+        position: fixed;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        z-index: 9999;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 }

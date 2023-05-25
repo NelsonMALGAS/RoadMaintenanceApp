@@ -10,99 +10,168 @@
 <script src="./src/scripts/getLocatin.js" defer type="module"></script>
 <body>
     <div class="header">
-            <img src="./src/img/A tech logo,circuit logo.png" alt="logo">
-            <div>
-                <h1>RoadMaintenanceApp</h1>
-                <p>About us</p>
-                <p>The road maintenance App is a great way to send your complains or road issues to the right authorities and get a chance to have your complaint received ASAP. Road safety is our number one concern and at RoadMaintenanceApp we make sure that our communities are keep safe. </p>
-            </div>
-            <a href="#" class="button" id="report-button">Report Road Fault</a>
-    </div>
-    <!-- This can be done with javascript stored data -->
-    <div class="main">
-    <div class="testimony">
-        Location of fix
-        <div>Date:</div>
-        <div>Status</div>
-    </div>
-    <div class="testimony">
-        Location of fix
-        <div>Date:</div>
-        <div>Status</div>
-    </div>
-    <div class="testimony">
-        Location of fix
-        <div>Date:</div>
-        <div>Status</div>
-    </div>
-    <div class="testimony">
-        Location of fix
-        <div>Date:</div>
-        <div>Status</div>
-    </div>
-    <div class="testimony">
-        Location of fix
-        <div>Date:</div>
-        <div>Status</div>
-    </div>
-    </div>
-
-     <!-- This will be the overlay that will appear after the button to report has been pressed -->
-    <dialog>
-    <div class="main-overlay">
-
-        <div class="road-issues">
-            <img class="road-issues-icon" src="./src/img/pothole.png" alt="">
-            <p>Potholes</p>
-        </div>
-        <div class="road-issues">
-            <img class="road-issues-icon" src="./src/img/light-bulb.png" alt="">
-            <p>Cracks and fissures</p>
-        </div>
-        <div class="road-issues">
-            <img class="road-issues-icon" src="./src/img/light-bulb.png" alt="">
-            <p class="road-issues-name">Sink-holes</p>
-        </div>
-        <div class="road-issues">
-            <img class="road-issues-icon" src="./src/img/sink.png" alt="">
-            <p class="road-issues-name">Loose gravel or debris</p>
-        </div>
-        <div class="road-issues">
-            <img class="road-issues-icon" src="./src/img/crack.png" alt="">
-            <p class="road-issues-name">Faded or worn road markings</p>
-        </div>
-        <div class="road-issues">
-            <img class="road-issues-icon" src="./src/img/pothole.png" alt="">
-            <p class="road-issues-name">Insufficient lighting</p>
-        </div>
-        <div class="road-issues">
-            <img class="road-issues-icon" src="./src/img/light-bulb.png" alt="">
-            <p class="road-issues-name">Road signs that need fixing</p>
-        </div>
-        <div class="road-issues">
-            <img class="road-issues-icon" src="./src/img/light-bulb.png" alt="more">
-            <p class="road-issues-name">Others</p>
-        </div>
-
-    </div>
-</dialog>
-
-    <div class="footer">
+        <img class= "logoimg"src="./src/img/A tech logo,circuit logo.png" alt="logo">
         <div>
-            <div>
-            Contants
-            <ul>
-                <li>011 439 5999</li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </div>
-            </ul>
-            <label>Feedback</label>
-            <textarea name="" id="" cols="30" rows="1"></textarea>
-            <p>reports an issue</p>
+        <h1 class="title">RoadMaintenanceApp</h1>
+        <p class="slogan">"Smooth Roads, Happy Journeys" </p>
         </div>
+</div>
+
+<div class="flex-container">     
+    <div class="image">
+        <img class= "heroimg"src="https://media.istockphoto.com/id/1246882564/photo/lane-closure-on-a-busy-road-due-to-maintenance-signs-detour-traffic-temporary-street-work.jpg?s=612x612&w=0&k=20&c=ZSRskDjYvpOPpI19vmPHV7pQ0BqOI2vCs-3TlA9FGGI=" alt="fix">
     </div>
+    <div class="grid-container">
+        <div class="subText">
+            <h3>Lorem ipsum dolor sit amet 
+            consectetur adipisicing elit. 
+            Repellat obcaecati doloribus, 
+            consequuntur deleniti atque autem 
+            recusandae nulla repellendus explicabo voluptatem?
+                Obcaecati velit dolore 
+            neque enim numquam! Impedit 
+            corrupti asperiores labore.
+            </h3>
+        </div>
+        <div class="callToAction">
+            <button class="left_button">showlist</button>
+            <button class="right_button" data-query-button="">addquery</button>
+        </div>
+</div>
+</div>
+
+ <!-- This will be the overlay that will appear after the button to report has been pressed -->
+<div class="main-overlay" data-query-overlay>
+<div class="box">
+<div class="road-issues">
+    <img class="road-issues-icon" src="./src/img/pothole.png" alt="">
+    <p>Potholes</p>
+</div>
+<div class="road-issues">
+    <img class="road-issues-icon" src="./src/img/light-bulb.png" alt="">
+    <p>Cracks and fissures</p>
+</div>
+<div class="road-issues">
+    <img class="road-issues-icon" src="./src/img/light-bulb.png" alt="">
+    <p class="road-issues-name">Sink-holes</p>
+</div>
+<div class="road-issues">
+    <img class="road-issues-icon" src="./src/img/sink.png" alt="">
+    <p class="road-issues-name">Loose gravel or debris</p>
+</div>
+<div class="road-issues">
+    <img class="road-issues-icon" src="./src/img/crack.png" alt="">
+    <p class="road-issues-name">Faded or worn road markings</p>
+</div>
+<div class="road-issues">
+    <img class="road-issues-icon" src="./src/img/pothole.png" alt="">
+    <p class="road-issues-name">Insufficient lighting</p>
+</div>
+<div class="road-issues">
+    <img class="road-issues-icon" src="./src/img/light-bulb.png" alt="">
+    <p class="road-issues-name">Road signs that need fixing</p>
+</div>
+<div class="road-issues">
+    <img class="road-issues-icon" src="./src/img/light-bulb.png" alt="more">
+    <p class="road-issues-name">Others</p>
+</div>
+</div>
+</div>
+
+<footer>
+<hr>
+
+<div class="footer-styles contacts">
+    <div>
+        <h3>Contants us</h3>
+        <ul>
+            <li>Call: 011 439 5999 (Mon-Fri 08h00-13h00)</li>
+            <li>Email: roadmaintenanceapp@gmail.com</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Connect with us</h3>
+        <ul class="socials">
+            <li><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a></li>
+            <li><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a></li>
+            <li><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a></li>
+            <li><a><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a></li>  
+        </ul>
+    </div>
+</div>
+<hr>
+<div class="footer-styles about-us">
+    <h2>About Us</h2>
+    <p>The Road Maintenance App is an exceptional digital platform designed to facilitate the reporting and resolution of road-related complaints and issues. With this user-friendly application, individuals can swiftly communicate their concerns to the appropriate authorities, ensuring prompt attention and action. Our utmost priority at RoadMaintenanceApp is road safety, and we are dedicated to safeguarding our communities.
+    <span class="more" style="color: rgb(32, 22, 9); text-decoration: underline; color:blue; cursor: pointer;">...See More</span>
+    </p>
+    <div class="see-more">
+        <p>   Through the Road Maintenance App, users gain an efficient and convenient channel to express their grievances regarding roads. Whether it's a pothole causing inconvenience or a traffic signal malfunctioning, this comprehensive platform enables users to submit detailed complaints with ease. The app is meticulously crafted to streamline the process, ensuring that your concerns reach the right authorities expeditiously.
+        </p>  
+        <p>   At RoadMaintenanceApp, we understand the importance of immediate attention to road issues, as they directly impact public safety. By leveraging the power of technology, we have created a seamless interface that facilitates communication between citizens and the relevant governing bodies responsible for road maintenance. We strive to bridge the gap and establish a direct line of communication, empowering individuals to play an active role in ensuring the well-being of their communities.
+        </p>    
+        <p>    When using the Road Maintenance App, users are encouraged to provide comprehensive descriptions of the issues they encounter. The app offers various categories to choose from, including potholes, damaged signage, faded road markings, or any other concern related to road safety. Users can supplement their complaints with photographs or videos to provide visual evidence, aiding authorities in better understanding the severity of the issue.
+        </p>    
+        <p>    Once a complaint is submitted through the app, the system automatically forwards it to the appropriate department responsible for addressing the specific problem. This ensures that the concern reaches the right set of eyes without any delay. The app also provides users with real-time updates on the progress of their complaints, ensuring transparency and keeping individuals informed about the resolution process.
+        </p>    
+        <p>    The Road Maintenance App goes beyond simply reporting issues; it fosters a sense of community engagement and responsibility. By empowering citizens to voice their concerns, we strive to create a safer road environment for everyone. Through the collaborative efforts of users and authorities, we can proactively identify and rectify road-related problems, thereby enhancing overall road safety standards.
+        </p>    
+        <p>    In conclusion, the Road Maintenance App stands as a remarkable tool for reporting road issues and complaints. With a user-friendly interface, prompt communication channels, and a focus on community safety, we ensure that your concerns are addressed swiftly and efficiently. Join us in our commitment to road safety, and together, we can create safer, well-maintained road networks for the benefit of all.</p>
+    </div>
+</div>
+<script>
+    const seeMoreButton = document.querySelector('.more');
+    const seeMoreContent = document.querySelector('.see-more');
+
+    seeMoreButton.addEventListener('click', function() {
+        if (seeMoreContent.style.display === 'none') {
+        seeMoreContent.style.display = 'block';
+        seeMoreButton.textContent = '...See Less';
+        } else {
+        seeMoreContent.style.display = 'none';
+        seeMoreButton.textContent = '...See More';
+        }
+    });
+</script>
+
+<hr>
+<div class="closing">
+<p>&copyRoadMaintenanceApp</p>
+
+<p id="feedback">Feedback: How can we improve</p>
+
+<div id="feedback-form">
+<h2>Feedback Form</h2>
+<form>
+  <label for="feedback-text">Your Feedback:</label><br>
+  <textarea id="feedback-text" rows="4" cols="50"></textarea><br><br>
+  <input type="submit" value="Submit">
+  <button id="cancel">Cancel</button>
+</form>
+</div>
+
+<script>
+// Function to show the feedback form
+function showFeedbackForm() {
+  var form = document.getElementById("feedback-form");
+  form.style.display = "block";
+}
+
+// Add click event listener to the feedback text
+var feedbackText = document.getElementById("feedback");
+feedbackText.addEventListener("click", showFeedbackForm);
+
+function cancelFeedbackForm() {
+  var form = document.getElementById("feedback-form");
+  form.style.display = "none";
+}
+
+// Add click event listener to the feedback text
+var feedbackText = document.getElementById("cancel");
+feedbackText.addEventListener("click", cancelFeedbackForm);
+
+</script>
+
+</footer>
 </body>
 </html>
