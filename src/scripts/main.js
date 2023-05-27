@@ -30,7 +30,7 @@ for (let i = 0; i < roadIssuesElements.length; i++) {
         appResources.appoverlays.queryoverlay.style.display = 'none'
         // Set the form heading to the issue name
         formHeading.textContent = issueName;
-        // Show the form overlay
+        return issueName
     });
 }
 
@@ -99,23 +99,51 @@ let submitButton1 = document.getElementById('submitButton1')
    // Get the console element
     let mainContent = document.getElementById('main-content');
     
+    const currentDate = new Date().getDate()
+    const currentMonth = new Date().getMonth() + 1
+    const currentYear = new Date().getFullYear()
+    const hours = new Date().getHours()
+    const minutes = new Date().getMinutes()
+
+
     // Event listener for submit button
     
     submitButton1.addEventListener('click', function() {
       // Get the values from the form inputs
+      
+      let formHeading = document.getElementById('form-heading').value
       let locationValue = document.getElementById('live-location').value;
       let imageFile = document.getElementById('image-upload').files[0];
       let descriptionValue = document.getElementById('descriptions').value;
     
       // Log the values in the console
-      logToConsole('Location: ' + locationValue);
-      logToConsole('Image File:', imageFile);
-      logToConsole('Description: ' + descriptionValue);
-      logToConsole('ffrf')
+      logToConsole(`
+        <div class="issues-appended">
+          <div class="report-date-and-time">Date:${currentYear}/${currentMonth}/${currentDate} ${hours}:${minutes.toString().padStart(2, '0')}
+          </div>
+          <div class="issues-info">
+            <h2 class="issues-name">${formHeading}</h2>
+            <div class="location-and-description">
+              <div class="location-info">Location: ${locationValue}</div>
+              <div class="issues-description">${descriptionValue}</div>
+              <br>
+              <div>Status: Pending</div>
+              <br>
+              <div>Review</div>
+              <div class="issue-review">No reviews yet!</div>
+            </div>
+          <div class="image-file">
+            <h4>Road Condition</h4>
+            <div>${imageFile}</div>
+            </div>
+          </div>
+        </div>    
+       `);
+  
       // Clear the form inputs
      // document.getElementById('myForm').reset();
      
-    formOverlay.close()
+    formOverlay.style.display = 'none'
     });
 
     // Function to log output to the console
