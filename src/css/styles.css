@@ -332,7 +332,7 @@ body {
 
 /* ---------form------------------ */
 
-.form-overlay {
+#form-overlay {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -500,4 +500,8 @@ li {
         z-index: 9999;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
+}
+
+#main-content {
+    width: 100%;
 }
