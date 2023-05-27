@@ -34,7 +34,6 @@ for (let i = 0; i < roadIssuesElements.length; i++) {
     });
 }
 
-
 const addressLocation= () => {
     let reportButton = document.getElementById('report-button');
   
@@ -95,19 +94,35 @@ const addressLocation= () => {
   
 document.addEventListener('DOMContentLoaded', addressLocation );
 
-const submitButton1 = document.getElementById("submit");
+let submitButton1 = document.getElementById('submitButton1')
 
-submitButton1.addEventListener("click", () => {
-  // Get the values from the form inputs
-  const locationValue = document.getElementById("live-location").value;
-  const imageFile = document.getElementById("image-upload").files[0];
-  const descriptionValue = document.querySelector("input[type='text'][placeholder='Optional but the message would be valuable']").value;
+   // Get the console element
+    let mainContent = document.getElementById('main-content');
+    
+    // Event listener for submit button
+    
+    submitButton1.addEventListener('click', function() {
+      // Get the values from the form inputs
+      let locationValue = document.getElementById('live-location').value;
+      let imageFile = document.getElementById('image-upload').files[0];
+      let descriptionValue = document.getElementById('descriptions').value;
+    
+      // Log the values in the console
+      logToConsole('Location: ' + locationValue);
+      logToConsole('Image File:', imageFile);
+      logToConsole('Description: ' + descriptionValue);
+      logToConsole('ffrf')
+      // Clear the form inputs
+     // document.getElementById('myForm').reset();
+     
+    formOverlay.close()
+    });
 
-  // Log the values in the console
-  console.log("Location:", locationValue);
-  console.log("Image File:", imageFile);
-  console.log("Description:", descriptionValue);
-  // Additional logic or actions can be performed with the values 
+    // Function to log output to the console
+var logToConsole = function(message) {
+  var outputElement = document.createElement('D');
+  outputElement.innerHTML = `<div>${message}</div>`;
+  mainContent.appendChild(outputElement);
+};
 
-});
 
