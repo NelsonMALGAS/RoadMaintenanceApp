@@ -82,7 +82,7 @@
 </div>
 
 <dialog data-form-overlay> 
-<form class="form-overlay">
+<form id="form-overlay">
     <h2 id="form-heading">Issue Name</h2>
     <label>Location:</label>
     <div class="fetch-location">
@@ -95,15 +95,16 @@
     </div>
     <div>
         <label>Message/ Description</label>
-        <input type="text" placeholder="Optional but the message would be valuable">
+        <input type="text" id="descriptions" placeholder="Optional but the message would be valuable">
     </div>
     <div class='buttons'>
-     <input type="button" value="Submit" id="submit"> <!-- onclick="getValue()"-->
+     <input type="button" value="Submit" id="submitButton1"> <!-- onclick="getValue()"-->
     <input type="button" value="Cancel" id="cancel"> 
     </div>
 </form>
-</dialog>
 
+</dialog>
+<div id="main-content"></div>
 <footer>
 <hr>
 
