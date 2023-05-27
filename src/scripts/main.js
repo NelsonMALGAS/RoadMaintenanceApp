@@ -108,48 +108,45 @@ let submitButton1 = document.getElementById('submitButton1')
 
     // Event listener for submit button
     
-    submitButton1.addEventListener('click', function() {
-      // Get the values from the form inputs
-      
-      let formHeading = document.getElementById('form-heading').value
-      let locationValue = document.getElementById('live-location').value;
-      let imageFile = document.getElementById('image-upload').files[0];
-      let descriptionValue = document.getElementById('descriptions').value;
-    
-      // Log the values in the console
-      logToConsole(`
-        <div class="issues-appended">
-          <div class="report-date-and-time">Date:${currentYear}/${currentMonth}/${currentDate} ${hours}:${minutes.toString().padStart(2, '0')}
-          </div>
-          <div class="issues-info">
-            <h2 class="issues-name">${formHeading}</h2>
-            <div class="location-and-description">
-              <div class="location-info">Location: ${locationValue}</div>
-              <div class="issues-description">${descriptionValue}</div>
-              <br>
-              <div>Status: Pending</div>
-              <br>
-              <div>Review</div>
-              <div class="issue-review">No reviews yet!</div>
-            </div>
-          <div class="image-file">
-            <h4>Road Condition</h4>
-            <div>${imageFile}</div>
-            </div>
-          </div>
-        </div>    
-       `);
+submitButton1.addEventListener('click', function() {
+  // Get the values from the form inputs
   
-      // Clear the form inputs
-     // document.getElementById('myForm').reset();
-     
-    formOverlay.style.display = 'none'
-    });
+  let formHeading = document.getElementById('form-heading').value
+  let locationValue = document.getElementById('live-location').value;
+  let imageFile = document.getElementById('image-upload').files[0];
+  let descriptionValue = document.getElementById('descriptions').value;
+
+  // Log the values in the console
+  logToConsole(`
+    <div class="issues-appended">
+      <div class="report-date-and-time">Date:${currentYear}/${currentMonth}/${currentDate} ${hours}:${minutes.toString().padStart(2, '0')}
+      </div>
+      <div class="issues-info">
+        <h2 class="issues-name">${formHeading}</h2>
+        <div class="location-and-description">
+          <div class="location-info">Location: ${locationValue}</div>
+          <div class="issues-description">${descriptionValue}</div>
+          <br>
+          <div>Status: Pending</div>
+          <br>
+          <div>Review</div>
+          <div class="issue-review">No reviews yet!</div>
+        </div>
+      <div class="image-file">
+        <h4>Road Condition</h4>
+        <div>${imageFile}</div>
+        </div>
+      </div>
+    </div>    
+  `);
+
+  formOverlay.style.display = 'none'
+});
 
     // Function to log output to the console
-var logToConsole = function(message) {
-  var outputElement = document.createElement('D');
-  outputElement.innerHTML = `<div>${message}</div>`;
+const logToConsole = function(message) {
+  var outputElement = document.createElement('div');
+  outputElement.innerHTML = `${message}`;
   mainContent.appendChild(outputElement);
 };
 
