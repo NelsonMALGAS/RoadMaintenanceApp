@@ -23,6 +23,18 @@
 // const hours = new Date().getHours()
 // const minutes = new Date().getMinutes()
 
+// <`p class="date">Date:${currentYear}/${currentMonth}/${currentDate} </p>
+//       <p class="report-time">TIME OF REPORT (${hours}:${minutes.toString().padStart(2, '0')})</p>
+//       <p class="status">Status :${STATUS.C} </p>
+//       <br><hr></hr>`
+
+// console.log(currentDate)
+// console.log(currentMonth)
+// console.log(currentYear)
+// console.log(hours)
+// console.log(minutes)
+
+
 // textAreaValue.addEventListener('submit' , (event)=>{
 //   event.preventDefault()
 //   const feedbackValue = document.querySelector('#feedback')
@@ -35,11 +47,7 @@
 // // User will be able to click on the road-issues-name to see ,date ,time , and the issue name
 // innerHtmlText.forEach(text => {
 //    text.addEventListener('click' , () =>{
-//     console.log(`ROAD ISSUE :${text.innerHTML}`)
-//     console.log(`DATE :${currentYear}/${currentMonth}/${currentDate}`)
-//     console.log( `TIME OF REPORT (${hours}:${minutes.toString().padStart(2, '0')})`)
-    
-    
+
 //   // Success callback function
 //   function success(position)  {
 //     const { latitude, longitude } = position.coords;
@@ -90,17 +98,5 @@
 //    }) 
    
 // });
-//  //plus buttton event
-// showIssuesButton.addEventListener('click' , () =>{
-//     mainOverlay.style.display = 'grid'
-//     mainOverlayMap.style.display = 'block'
-    
-  
-   
-// })
-// closeIssuesButton.addEventListener('click' , ()=>{
-//   mainOverlay.style.display = ''
-//   mainOverlayMap.style.display = ''
-// })
 
 
