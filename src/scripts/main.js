@@ -124,6 +124,14 @@ submitButton1.addEventListener('click', function() {
   const imageFile = document.getElementById('image-upload').files[0];
   const descriptionValue = document.getElementById('descriptions').value;
 
+  const roadIssuesImgs = document.querySelectorAll("img .road-issues-icon");
+  roadIssuesImgs.forEach(img => {
+    img.addEventListener('click', () => {
+      console.log(img.src);
+    });
+  });
+  
+
   // Log the values in the console
   logToConsole(`
     <div class="issues-appended">
@@ -141,8 +149,9 @@ submitButton1.addEventListener('click', function() {
           <div class="issue-review">No reviews yet!</div>
         </div>
         <div class="image-file">
-          <h4>Road Condition</h4>
+          <h4>${formHeading}</h4>
           <img src="${URL.createObjectURL(imageFile)}" alt="Road Condition Image">
+          <img src="" alt="Road Condition Image">
         </div>
       </div>
     </div>    
