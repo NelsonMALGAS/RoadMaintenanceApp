@@ -151,7 +151,6 @@ submitButton1.addEventListener('click', function() {
         <div class="image-file">
           <h4>${formHeading}</h4>
           <img src="${URL.createObjectURL(imageFile)}" alt="Road Condition Image">
-          <img src="" alt="Road Condition Image">
         </div>
       </div>
     </div>    
